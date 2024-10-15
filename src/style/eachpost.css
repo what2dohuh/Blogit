@@ -1,0 +1,59 @@
+.each-post-container {
+    width: 70%;
+ /* Set a reasonable maximum width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.post-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.post-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    word-wrap: break-word; /* Ensures long words break properly */
+}
+
+.post-image {
+    max-width: 100%; /* Ensure the image doesn't overflow the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add rounded corners */
+    object-fit: contain; /* Ensure the image fits inside the container */
+    display: block; /* Ensures the image behaves like a block element */
+    margin: 0 auto; /* Center the image if it's smaller than the container */
+}
+
+.post-category, .post-author, .post-likes, .post-date {
+    font-size: 14px;
+    color: #666; /* Lighter color for supplementary information */
+}
+
+.post-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333; /* Darker color for the description text */
+    word-wrap: break-word; /* Prevents text from overflowing */
+    white-space: pre-wrap; /* Preserve line breaks in the text */
+}
+
+@media screen and (max-width: 768px) {
+    .each-post-container {
+        padding: 10px;
+    }
+    
+    .post-title {
+        font-size: 20px;
+    }
+    
+    .post-description {
+        font-size: 14px;
+    }
+}
